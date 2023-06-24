@@ -1,13 +1,14 @@
 import L1 from './Components/L1';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
+import L2 from './Components/L2';
 
 function App() {
   return (
     <Router>
       <div>
-        <nav style={{display: 'flex'}}>
-          <ul>
-            <li>
+        <nav >
+          <ul style={{display: 'flex', gap:'5px', listStyleType:'none'}}>
+            <li style={{}}>
               <Link to="/">L1</Link>
             </li>
             <li>
@@ -17,6 +18,7 @@ function App() {
         </nav>
         <Routes>
           <Route path='/' element={<L1 />} />
+          <Route path='/l2' element={<L2 />} />
         </Routes>
       </div>
     </Router>
